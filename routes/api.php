@@ -21,3 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/test/paymentTransfer', [App\Http\Controllers\PaymentsController::class, 'bankTransferCharge']);
 Route::post('/token/payment', [App\Http\Controllers\PaymentsController::class, 'getTokenCC']);
 Route::post('/test/paymentCC', [App\Http\Controllers\PaymentsController::class, 'chargeCreditCard']);
+
+Route::resource('getPost', App\Http\Controllers\GetDataController::class);
